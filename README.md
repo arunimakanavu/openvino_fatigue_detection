@@ -52,7 +52,7 @@ numpy
 
 ## 3. Required OpenVINO Models
 
-⚠️ **Model conversion is NOT required**. Pre-converted IR models from Open Model Zoo are used.
+**Model conversion is NOT required**. Pre-converted IR models from Open Model Zoo are used.
 
 Download the following models using Open Model Zoo tools:
 
@@ -82,7 +82,7 @@ models/
 From the project root:
 
 ```bash
-python gaze_drowsiness.py
+python drowsiness_detection_v2.py
 ```
 
 Press **`q`** to quit.
@@ -131,7 +131,4 @@ This fusion strategy reduces false positives caused by normal downward gaze (e.g
 
 This POC demonstrates how **head pose and gaze estimation can be fused** using OpenVINO models to detect potential drowsiness scenarios in real time. The project focuses on clarity, debuggability, and correctness of model usage rather than completeness.
 
----
-
-Happy hacking 🚀
 
