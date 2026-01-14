@@ -82,7 +82,7 @@ models/
 From the project root:
 
 ```bash
-python gaze_drowsiness.py
+python3 fatigue_detection_demo.py
 ```
 
 Press **`q`** to quit.
@@ -97,22 +97,12 @@ Press **`q`** to quit.
 - **Pitch & gaze metrics** (debug overlay)
 - **DROWSINESS ALERT** text when conditions are met
 
-### Terminal
-- Real-time gaze vector values:
-
-```text
-Gaze vector: gx=0.08, gy=-0.23, gz=-0.90
-```
-
-These values confirm that gaze estimation is active and stable.
-
----
 
 ## 6. Alert Logic (High-level)
 
 - **Head Pose**: primary indicator (sustained downward pitch)
 - **Gaze Stability**: secondary confirmation (low variance over time)
-- Alert is raised only when **both conditions persist for N frames**
+- Alert is raised only when **both conditions persist for N frames** (in this case 15 frames)
 
 This fusion strategy reduces false positives caused by normal downward gaze (e.g., reading, looking at dashboard).
 
